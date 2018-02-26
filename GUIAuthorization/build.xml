@@ -1,0 +1,100 @@
+<?xml version="1.0"?>
+
+<project name="GUIAuthorization" default="deploy" basedir=".">
+	<property environment="env"/>
+	<property name="jboss.home" value="D:\COLSANITAS\PROYECTOS\GUI_AUTHORIZATION\Gui_JBoss4.2\jboss-4.2.2.GA"/>
+	<!-- set global properties for this build -->
+	<!-- set properties -->
+			<property file="${basedir}/build.properties" />		
+	<!-- set names -->
+	<property name="project.name" value="GUIAuthorization" />
+	<!-- set directories -->
+	<property name="base.dir" value="." />
+	<property name="dist.dir" value="dist" />
+	<property name="src.dir" value="src" />
+	<property name="bin.dir" value="build" />
+	<property name="lib.dir" value="WebRoot/WEB-INF/lib" />
+	<property name="mi.dir" value="WebRoot/META-INF" />
+	<property name="deploy.dir" value="${jboss.home}/server/default/deploy" />
+	<property name="web.content" value="WebRoot" />
+	<property name="war.dir" value="WebRoot/WEB-INF/classes" />
+	<!-- set variables -->
+	<property name="javac.debug" value="true" />
+	<property name="javac.deprecation" value="false" />
+	<property name="debug" value="false" />
+
+	<fileset id="lib" dir="${lib.dir}">
+		<include name="*.jar" />
+	</fileset>
+
+	<fileset id="jbosslib" dir="${jboss.home}/server/default/lib">
+		<include name="*.jar" />
+	</fileset>
+
+	<fileset id="ejb3" dir="${jboss.home}/server/default/deploy/ejb3.deployer">
+		<include name="*.jar" />
+	</fileset>
+	
+	<fileset id="ejb3-persistence" dir="${jboss.home}/client">
+		<include name="*.jar" />
+	</fileset>
+	
+	<fileset id="jbossweb" dir="${jboss.home}/server/default/deploy/jboss-web.deployer/jsf-libs">
+			<include name="*.jar" />
+	</fileset>
+
+	<fileset id="GUIauth-war" dir="${dist.dir}">
+		<include name="*.jar" />
+	</fileset>
+
+	<path id="build.classpath">
+		<fileset refid="lib" />
+		<fileset refid="jbosslib" />
+		<fileset refid="ejb3" />
+		<fileset refid="ejb3-persistence" />
+		<fileset refid="jbossweb" />
+	</path>
+	
+	<target name="init" description="Initialize the build">
+		<mkdir dir="${dist.dir}" />
+	</target>
+
+	<target name="compile-web" description="Compile the Java source code for web">
+			<delete dir="${web.content}/WEB-INF/classes" />
+			<mkdir dir="${web.content}/WEB-INF/classes" />
+			<javac classpathref="build.classpath" destdir="${war.dir}" debug="${javac.debug}" deprecation="${javac.deprecation}" nowarn="on"
+				includes="**/**" excludes="**/test/**">
+				<src path="${src.dir}"/>			
+			</javac>
+	</target>
+	
+	<target name="WAR-GUIauthorization" depends="compile-web" description="Package the distribution file">
+		<war warfile="${dist.dir}/${project.name}.war" webxml="${web.content}/WEB-INF/web.xml">
+			<zipfileset dir="${web.content}" includes="**/**"
+			                                excludes="WEB-INF/web.xml,
+											WEB-INF/lib/Authentication.jar, WEB-INF/lib/Authorization.jar" />
+			<zipfileset dir="${src.dir}" includes="log4j.properties"/>
+			<zipfileset dir="${src.dir}" includes="cfg.properties"/>
+			<zipfileset dir="${src.dir}" includes="messages.properties"/>
+			<zipfileset dir="${src.dir}" includes="app.properties"
+										fullpath="WEB-INF/classes/app.properties" />
+		</war>
+	</target>
+
+	<target name="deploy" depends="WAR-GUIauthorization" description="Deploy to JBoss AS">
+		<fail unless="jboss.home">jboss.home not set</fail>
+		<copy todir="${deploy.dir}" file="${dist.dir}/${project.name}.war" />
+	</target>
+
+	<target name="undeploy" description="Undeploy the example from JBoss">
+		<delete file="${deploy.dir}/${project.name}.war" />
+	</target>
+
+	<target name="clean" description="Cleans up the build directory">
+		<delete dir="${dist.dir}" />
+		<mkdir dir="${dist.dir}" />
+		<delete dir="${web.content}/WEB-INF/classes" />
+		<mkdir dir="${web.content}/WEB-INF/classes" />
+	</target>
+
+</project>

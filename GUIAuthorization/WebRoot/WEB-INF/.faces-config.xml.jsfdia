@@ -1,0 +1,264 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<PROCESS model-entity="JSFProcess">
+ <PROCESS-ITEM NAME="rules:*" PATH="*" SHAPE="32,241,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:*:0" NAME="item" PATH="*" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="salir::#index.jsp" NAME="output"
+    PATH="/index.jsp" TARGET="rules:#index.jsp" TITLE="salir" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="adminDomain::#webContent#adminDomain#listAdmin.jsp"
+    NAME="output1" PATH="/webContent/adminDomain/listAdmin.jsp"
+    TARGET="rules:#webContent#adminDomain#listAdmin.jsp"
+    TITLE="adminDomain" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="createDomain::#webContent#adminDomain#createDomain.jsp"
+    NAME="output2" PATH="/webContent/adminDomain/createDomain.jsp"
+    TARGET="rules:#webContent#adminDomain#createDomain.jsp"
+    TITLE="createDomain" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="adminGroupRole::#webContent#adminGroupRole#listAdmin.jsp"
+    NAME="output3" PATH="/webContent/adminGroupRole/listAdmin.jsp"
+    TARGET="rules:#webContent#adminGroupRole#listAdmin.jsp"
+    TITLE="adminGroupRole" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="createGroupRole::#webContent#adminGroupRole#createGroupRole.jsp"
+    NAME="output4" PATH="/webContent/adminGroupRole/createGroupRole.jsp"
+    TARGET="rules:#webContent#adminGroupRole#createGroupRole.jsp"
+    TITLE="createGroupRole" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="createUser::#webContent#admUser#createUser.jsp" NAME="output5"
+    PATH="/webContent/admUser/createUser.jsp"
+    TARGET="rules:#webContent#admUser#createUser.jsp" TITLE="createUser" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="adminGroupPermission::#webContent#adminGroupPermission#listAdmin.jsp"
+    NAME="output6" PATH="/webContent/adminGroupPermission/listAdmin.jsp"
+    TARGET="rules:#webContent#adminGroupPermission#listAdmin.jsp"
+    TITLE="adminGroupPermission" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="createGroupPermission::#webContent#adminGroupPermission#createGroupPermission.jsp"
+    NAME="output7"
+    PATH="/webContent/adminGroupPermission/createGroupPermission.jsp"
+    TARGET="rules:#webContent#adminGroupPermission#createGroupPermission.jsp"
+    TITLE="createGroupPermission" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="adminPermission::#webContent#adminPermission#listAdmin.jsp"
+    NAME="output8" PATH="/webContent/adminPermission/listAdmin.jsp"
+    TARGET="rules:#webContent#adminPermission#listAdmin.jsp"
+    TITLE="adminPermission" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="createPermission::#webContent#adminPermission#createPermission.jsp"
+    NAME="output9"
+    PATH="/webContent/adminPermission/createPermission.jsp"
+    TARGET="rules:#webContent#adminPermission#createPermission.jsp"
+    TITLE="createPermission" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="adminRole::#webContent#adminRole#listAdmin.jsp" NAME="output10"
+    PATH="/webContent/adminRole/listAdmin.jsp"
+    TARGET="rules:#webContent#adminRole#listAdmin.jsp" TITLE="adminRole" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="userAdminDomain::#webContent#adminDomain#addUserDomain.jsp"
+    NAME="output11" PATH="/webContent/adminDomain/addUserDomain.jsp"
+    TARGET="rules:#webContent#adminDomain#addUserDomain.jsp"
+    TITLE="userAdminDomain" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="addPermission::#webContent#adminRole#addPermission.jsp"
+    NAME="output12" PATH="/webContent/adminRole/addPermission.jsp"
+    TARGET="rules:#webContent#adminRole#addPermission.jsp"
+    TITLE="addPermission" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="addUsers::#webContent#adminRole#addUser.jsp"
+    NAME="output13" PATH="/webContent/adminRole/addUser.jsp"
+    TARGET="rules:#webContent#adminRole#addUser.jsp" TITLE="addUsers" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT
+    ID="depureUsers::#webContent#admUser#depureUsers.jsp"
+    NAME="output14" PATH="/webContent/admUser/depureUsers.jsp"
+    TARGET="rules:#webContent#admUser#depureUsers.jsp"
+    TITLE="depureUsers" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminRole#listAdmin.jsp"
+  PATH="/webContent/adminRole/listAdmin.jsp" SHAPE="240,833,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminRole#listAdmin.jsp:0"
+   NAME="item" PATH="/webContent/adminRole/listAdmin.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="detalle::#webContent#adminRole#admin.jsp"
+    NAME="output" PATH="/webContent/adminRole/admin.jsp"
+    TARGET="rules:#webContent#adminRole#admin.jsp" TITLE="detalle" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="nuevo::#webContent#adminRole#create.jsp"
+    NAME="output1" PATH="/webContent/adminRole/create.jsp"
+    TARGET="rules:#webContent#adminRole#create.jsp" TITLE="nuevo" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminRole#create.jsp"
+  PATH="/webContent/adminRole/create.jsp" SHAPE="528,961,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminRole#create.jsp:0"
+   NAME="item" PATH="/webContent/adminRole/create.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="regresar::#webContent#adminRole#listAdmin.jsp" NAME="output"
+    PATH="/webContent/adminRole/listAdmin.jsp"
+    TARGET="rules:#webContent#adminRole#listAdmin.jsp" TITLE="regresar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminRole#admin.jsp"
+  PATH="/webContent/adminRole/admin.jsp" SHAPE="512,961,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminRole#admin.jsp:0" NAME="item"
+   PATH="/webContent/adminRole/admin.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="regresar::#webContent#adminRole#listAdmin.jsp" NAME="output"
+    PATH="/webContent/adminRole/listAdmin.jsp"
+    TARGET="rules:#webContent#adminRole#listAdmin.jsp" TITLE="regresar" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminDomain#listAdmin.jsp"
+  PATH="/webContent/adminDomain/listAdmin.jsp" SHAPE="304,257,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminDomain#listAdmin.jsp:0"
+   NAME="item" PATH="/webContent/adminDomain/listAdmin.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="updateDomain::#webContent#adminDomain#updateDomain.jsp"
+    NAME="output" PATH="/webContent/adminDomain/updateDomain.jsp"
+    TARGET="rules:#webContent#adminDomain#updateDomain.jsp"
+    TITLE="updateDomain" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminDomain#updateDomain.jsp"
+  PATH="/webContent/adminDomain/updateDomain.jsp" SHAPE="32,545,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminDomain#updateDomain.jsp:0"
+   NAME="item" PATH="/webContent/adminDomain/updateDomain.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="return::#webContent#adminDomain#listAdmin.jsp" NAME="output"
+    PATH="/webContent/adminDomain/listAdmin.jsp"
+    TARGET="rules:#webContent#adminDomain#listAdmin.jsp" TITLE="return" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminGroupPermission#listAdmin.jsp"
+  PATH="/webContent/adminGroupPermission/listAdmin.jsp"
+  SHAPE="304,529,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM
+   ID="rules:#webContent#adminGroupPermission#listAdmin.jsp:0"
+   NAME="item" PATH="/webContent/adminGroupPermission/listAdmin.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="updateGroupPermission::#webContent#adminGroupPermission#updateGroupPermission.jsp"
+    NAME="output"
+    PATH="/webContent/adminGroupPermission/updateGroupPermission.jsp"
+    TARGET="rules:#webContent#adminGroupPermission#updateGroupPermission.jsp"
+    TITLE="updateGroupPermission" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminGroupPermission#updateGroupPermission.jsp"
+  PATH="/webContent/adminGroupPermission/updateGroupPermission.jsp"
+  SHAPE="32,769,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM
+   ID="rules:#webContent#adminGroupPermission#updateGroupPermission.jsp:0"
+   NAME="item"
+   PATH="/webContent/adminGroupPermission/updateGroupPermission.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="return::#webContent#adminGroupPermission#listAdmin.jsp"
+    NAME="output" PATH="/webContent/adminGroupPermission/listAdmin.jsp"
+    TARGET="rules:#webContent#adminGroupPermission#listAdmin.jsp"
+    TITLE="return" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminGroupRole#listAdmin.jsp"
+  PATH="/webContent/adminGroupRole/listAdmin.jsp" SHAPE="304,529,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminGroupRole#listAdmin.jsp:0"
+   NAME="item" PATH="/webContent/adminGroupRole/listAdmin.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="updateGroupRole::#webContent#adminGroupRole#updateGroupRole.jsp"
+    NAME="output" PATH="/webContent/adminGroupRole/updateGroupRole.jsp"
+    TARGET="rules:#webContent#adminGroupRole#updateGroupRole.jsp"
+    TITLE="updateGroupRole" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminGroupRole#updateGroupRole.jsp"
+  PATH="/webContent/adminGroupRole/updateGroupRole.jsp"
+  SHAPE="32,657,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM
+   ID="rules:#webContent#adminGroupRole#updateGroupRole.jsp:0"
+   NAME="item" PATH="/webContent/adminGroupRole/updateGroupRole.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="return::#webContent#adminGroupRole#listAdmin.jsp" NAME="output"
+    PATH="/webContent/adminGroupRole/listAdmin.jsp"
+    TARGET="rules:#webContent#adminGroupRole#listAdmin.jsp"
+    TITLE="return" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminPermission#listAdmin.jsp"
+  PATH="/webContent/adminPermission/listAdmin.jsp" SHAPE="304,529,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules:#webContent#adminPermission#listAdmin.jsp:0"
+   NAME="item" PATH="/webContent/adminPermission/listAdmin.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="updatePermission::#webContent#adminPermission#updatePermission.jsp"
+    NAME="output"
+    PATH="/webContent/adminPermission/updatePermission.jsp"
+    TARGET="rules:#webContent#adminPermission#updatePermission.jsp"
+    TITLE="updatePermission" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminPermission#updatePermission.jsp"
+  PATH="/webContent/adminPermission/updatePermission.jsp"
+  SHAPE="32,881,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM
+   ID="rules:#webContent#adminPermission#updatePermission.jsp:0"
+   NAME="item" PATH="/webContent/adminPermission/updatePermission.jsp" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="return::#webContent#adminPermission#listAdmin.jsp" NAME="output"
+    PATH="/webContent/adminPermission/listAdmin.jsp"
+    TARGET="rules:#webContent#adminPermission#listAdmin.jsp"
+    TITLE="return" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:" SHAPE="32,1249,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::0" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT ID="RegistrarCuenta::#webContent#principal.jsp"
+    NAME="output" PATH="/webContent/principal.jsp"
+    TARGET="rules:#webContent#principal.jsp" TITLE="RegistrarCuenta" model-entity="JSFProcessItemOutput"/>
+   <PROCESS-ITEM-OUTPUT ID="estadoCuenta::#webContent#principal.jsp"
+    NAME="output1" PATH="/webContent/principal.jsp"
+    TARGET="rules:#webContent#principal.jsp" TITLE="estadoCuenta" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules::1" SHAPE="32,2545,0,0" model-entity="JSFProcessGroup">
+  <PROCESS-ITEM ID="rules::1" NAME="item" model-entity="JSFProcessItem">
+   <PROCESS-ITEM-OUTPUT
+    ID="SincronizarPermisos::#webContent#adminPermission#SincPermission.jsp"
+    NAME="output" PATH="/webContent/adminPermission/SincPermission.jsp"
+    TARGET="rules:#webContent#adminPermission#SincPermission.jsp"
+    TITLE="SincronizarPermisos" model-entity="JSFProcessItemOutput"/>
+  </PROCESS-ITEM>
+ </PROCESS-ITEM>
+ <PROCESS-ITEM NAME="rules:#webContent#adminRole#addUser.jsp"
+  PATH="/webContent/adminRole/addUser.jsp" SHAPE="656,1633,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminGroupPermission#createGroupPermission.jsp"
+  PATH="/webContent/adminGroupPermission/createGroupPermission.jsp"
+  SHAPE="32,1617,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminGroupRole#createGroupRole.jsp"
+  PATH="/webContent/adminGroupRole/createGroupRole.jsp"
+  SHAPE="864,1617,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminPermission#createPermission.jsp"
+  PATH="/webContent/adminPermission/createPermission.jsp"
+  SHAPE="240,1633,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#adminDomain#createDomain.jsp"
+  PATH="/webContent/adminDomain/createDomain.jsp" SHAPE="1072,1633,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#admUser#depureUsers.jsp"
+  PATH="/webContent/admUser/depureUsers.jsp" SHAPE="32,1729,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#admUser#createUser.jsp"
+  PATH="/webContent/admUser/createUser.jsp" SHAPE="240,1745,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#adminRole#addPermission.jsp"
+  PATH="/webContent/adminRole/addPermission.jsp" SHAPE="448,1617,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#adminRole#createRole.jsp"
+  PATH="/webContent/adminRole/createRole.jsp" SHAPE="448,1729,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM
+  NAME="rules:#webContent#adminPermission#SincPermission.jsp"
+  PATH="/webContent/adminPermission/SincPermission.jsp"
+  SHAPE="240,1521,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#adminDomain#addUserDomain.jsp"
+  PATH="/webContent/adminDomain/addUserDomain.jsp" SHAPE="304,593,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#webContent#principal.jsp"
+  PATH="/webContent/principal.jsp" SHAPE="256,2337,0,0" model-entity="JSFProcessGroup"/>
+ <PROCESS-ITEM NAME="rules:#index.jsp" PATH="/index.jsp"
+  SHAPE="304,817,0,0" model-entity="JSFProcessGroup"/>
+</PROCESS>
