@@ -1,0 +1,8 @@
+20391739	Ligia Esperanza	Baquero Vargas	39	Analista de gestion humana	1978-03-20	2147483647	Cll 6 C # 94 A -60 int 5 Apto 302
+1012399315	Juan Sebastian	Cobos Gutierrez	24	Soporte Tecnico	1993-05-21	2147483647	Cll 70 F Sur #80 J-45
+1013672148	Eduard David	Lozano Arango	20	Soporte Tecnico	1997-01-27	2147483647	Cr 7 # 2-99 Soacha
+1015480002	Miguel Angel	Pinzon Vacca	18	Soporte Tecnico	1999-03-09	2147483647	Cll 70 #54-24
+1020717274	Hamilton	Bolaños Gonzalez	31	Ing inHouse	1986-07-26	2147483647	Cra 1 Bis este #162 A -58 Int 3
+1022947652	Edgar Augusto	Hernandez Romero	28	Soporte Tecnico	1988-12-30	2147483647	Cll 98 Sur # 067 Este
+1030674214	Duvan Camilo	Alfonso Patiño	20	Aprendiz Sena	1997-01-18	2147483647	Cll 41 A #72 H -59 Sur
+1032426763	Angela Maria	Castillo Morales	28	Analista de servicio al cliente y helpdesk	1989-01-10	2147483647	Cll 153 #115-80 Bosques de camino verde Int 13 Apto 503

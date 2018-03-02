@@ -1,0 +1,8 @@
+<route>
+	<from uri="file:in?noop=false"/>
+<transform>
+ 	 <groovy>${body.replace((n)'\\',(ñ)'-')}</groovy> 
+</transform>
+		<to uri= "file:out"/>
+
+	</route>
